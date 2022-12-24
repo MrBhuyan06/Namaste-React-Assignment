@@ -19,3 +19,5 @@
   - Hosting the static dataContainer closer to the user(Edge location)
   - Follow the Region Rule and regulation
   - Allow Posting content in the boxes Via ui.
+  - Daigram
+   ![](cdn.png)
