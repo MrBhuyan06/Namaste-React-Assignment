@@ -12,3 +12,10 @@
     1. > div.className
     2. >div{"Am inside the div"}
     3. >ul>li{$}*5
+2. What is CDN and Cache?
+  - **Cache** is type of temporary or short time memory, it is help to retrive data faster (which avoid to read data from original data source) rather save static and most use data copy into the memory.
+  - **CDN**(contain Devlivery Network) it is generally a type of cache store the static contain.
+  - Specializes of Cache
+  - Hosting the static dataContainer closer to the user(Edge location)
+  - Follow the Region Rule and regulation
+  - Allow Posting content in the boxes Via ui.
