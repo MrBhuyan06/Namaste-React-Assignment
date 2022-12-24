@@ -21,3 +21,7 @@
   - Allow Posting content in the boxes Via ui.
   - Daigram
    ![](cdn.png)
+
+3. What is CrossOrigin Attribute?
+   - By using the CrossOriginAttribute it trigger to mode of request to http cors request
+   - **cors** cross origin request sharing is a mechanism which use addition http header to tell the brower wheater a specific web app share the resources with another web app.(both the orgin must be different)
