@@ -26,3 +26,5 @@
    - By using the CrossOriginAttribute it trigger to mode of request to http cors request
    - **cors** cross origin request sharing is a mechanism which use addition http header to tell the brower wheater a specific web app share the resources with another web app.(both the orgin must be different)
 4. What is Async and Differ
+- asyn and the differ the both attribute used in script the tag,  when use async while the browser Parsing the html and parallels fetch the script from the network when the script is available then there only it execute it and after the html parsing start again
+- where a in Differ attribute it Parse the html and parallels fetch the script from the network and when the html parsing has done it execute the script and follow the order of execution where as the async didn't give the guarantee to follow the order of the execution
