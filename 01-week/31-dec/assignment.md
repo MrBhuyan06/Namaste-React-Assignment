@@ -18,3 +18,6 @@
   - intialize `npm` into your repo (npm -init -y)
   -  install `react` and `react-dom`
      > npm i react react-dom
+  - install parcel
+     > n
+  -  ignite your app with parce
