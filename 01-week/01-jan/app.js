@@ -1,6 +1,8 @@
 import React, { createElement } from 'react'
 import ReactDOM from 'react-dom/client'
 
+import { Header  } from './Header.jsx'
+
 /**
  * Create Nested header element Using React.createElement(h1,h2,h3)
  * inside a div with class tittle
@@ -8,22 +10,22 @@ import ReactDOM from 'react-dom/client'
  */
 
  
-const h1=React.createElement("h1",{
-    style:{color:"red"}
-},"React")
+// const h1=React.createElement("h1",{
+//     style:{color:"red"}
+// },"React")
 
-const h2=React.createElement("h2",{
-    style:{color:"red"}
-},"is")
-const h3=React.createElement("h3",{
-    style:{color:"red"}
-},"Love")
+// const h2=React.createElement("h2",{
+//     style:{color:"red"}
+// },"is")
+// const h3=React.createElement("h3",{
+//     style:{color:"red"}
+// },"Love")
 
-const div=createElement("div",{className:"tittle"},[h1, h2, h3])
+// const div=createElement("div",{className:"tittle"},[h1, h2, h3])
 
-const root=ReactDOM.createRoot(document.getElementById("root"))
+// const root=ReactDOM.createRoot(document.getElementById("root"))
 
-root.render(div)
+// root.render(div)
 
 /**
 //  * Create the same element using jsx
@@ -50,11 +52,18 @@ root.render(div)
  * inside a div with class tittle
  * TASK 2
  */
+const Heading=() =>(
+    <h1>Hello</h1>
+)
 
 const DivHeader=() =>(
     <div className='tittle'>
-        <h1>HEllo</h1>
+        {Heading()}
         <h1>World</h1>
         <h1>Abhihshek</h1>
     </div>
 )
+
+const root=ReactDOM.createRoot(document.getElementById("root"))
+
+root.render(<Header/>)
