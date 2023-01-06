@@ -1,0 +1,18 @@
+// const h1=document.createElement('h1')
+// h1.innerHTML="Hello World"
+// const div= document.getElementById("container")
+// div.appendChild(h1)
+// 
+
+const h1=React.createElement('h1' ,{}, "Hello wolrd")
+console.log(h1);
+
+const h2=React.createElement('h2', {style:{color:"red",textAlign:"center"}}, "Namaste")
+
+const div2=React.createElement('div',{
+    id:'container-div'
+},[h1,h2]);
+
+const div=ReactDOM.createRoot(document.getElementById('container'))
+
+div.render(div2)
