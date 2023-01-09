@@ -1,0 +1,37 @@
+{
+  "name": "ract",
+  "version": "0.0.1",
+  "description": "Yet another template engine learns from ractive",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "test-cover": "nyc --reporter=html --reporter=text mocha",
+    "report-cover": "nyc report --reporter=text-lcov > coverage.lcov && codecov"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/magicdawn/ract.git"
+  },
+  "keywords": [
+    "ract",
+    "ractive",
+    "template"
+  ],
+  "author": "magicdawn",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/magicdawn/ract/issues"
+  },
+  "homepage": "https://github.com/magicdawn/ract#readme",
+  "devDependencies": {
+    "babel-eslint": "^7.1.0",
+    "babel-plugin-transform-async-to-generator": "^6.16.0",
+    "babel-polyfill": "^6.16.0",
+    "babel-register": "^6.18.0",
+    "codecov": "^1.0.1",
+    "eslint": "^3.10.0",
+    "mocha": "^3.1.2",
+    "nyc": "^8.4.0",
+    "should": "^11.1.1"
+  }
+}
