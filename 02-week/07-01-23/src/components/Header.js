@@ -8,10 +8,10 @@ const Header = () => {
       </a>
       <div className="nav-lists">
         <ul>
-          <li>Home</li>
-          <li>About</li>
-          <li>Contact us</li>
-          <li>Cart</li>
+          <li key={1}>Home</li>
+          <li key={2}>About</li>
+          <li key={3}>Contact us</li>
+          <li key={4}>Cart</li>
         </ul>
       </div>
     </div>

@@ -3,12 +3,15 @@ import ReactDOM from "react-dom/client";
 
 //components Import Here
 import Header from "./components/Header.js";
-
-const test = <h1>Hello World</h1>;
-console.log(test);
+import Body from "./components/Body.js";
 
 const AppLayout = () => {
-  return <Header />;
+  return (
+    <>
+      <Header />
+      <Body />
+    </>
+  );
 };
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
