@@ -18,3 +18,29 @@
 .nav-lists > ul > li {
   padding-left: 10px;
 }
+.resto-list {
+  width: 80%;
+  border: 2px solid black;
+  margin: 0 auto;
+
+  margin-top: 2px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.resto-card {
+  max-width: 200px;
+  border: 2px solid black;
+  margin: 5px;
+  padding: 5px;
+  line-break: anywhere;
+}
+.resto-card > img {
+  width: 100%;
+}
+.resto-card > h2,
+h3,
+h4 {
+  font-size: small;
+  text-align: justify;
+}

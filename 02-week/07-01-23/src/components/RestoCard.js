@@ -19,7 +19,7 @@ const RestoCard = ({
           alt="logo"
         />
         <h2>{name}</h2>
-        <h3>{cuisines}</h3>
+        <h3>{cuisines.join(",")}</h3>
         <h3>{`${lastMileTravelString}`}min</h3>
       </div>
     </div>

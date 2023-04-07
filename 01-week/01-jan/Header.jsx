@@ -5,6 +5,7 @@ import './header.css'
 
 
 export const Header = () => {
+  console.log("HEllo am in the console")
   return (
     <header className="">
         <div className="container header__container">
@@ -12,13 +13,14 @@ export const Header = () => {
 
             <div>
               <form action="">
-                <input type="text" placeHolder='search here' />
+                <input type="text" placeholder='search here' />
                 <button>Search</button>
               </form>
             </div>
 
             <div className="avtar">
-              <FaUserCircle  className="avtor"/>
+              <FaUserCircle  style={{color:"blue"}} className="avtor"/>
+              
             </div>
         </div>
 
