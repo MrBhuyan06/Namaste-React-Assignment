@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import RestuarentCard from "./RestuarentCard.js";
 import Shimmer from "./Shimmer.js";
 import { IMG_CDN_URL } from "../contains.js";
+import { Link } from "react-router-dom";
 
 function getSearchRestuarent(searchText, listofResturent) {
   const filterSearchData = listofResturent.filter((restuarent) => {
@@ -25,11 +26,11 @@ const Main = () => {
 
   async function getRestuarent() {
     const data = await fetch(
-      " https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.62448069999999&page_type=DESKTOP_WEB_LISTING"
+      " https://www.swiggy.com/dapi/restaurants/list/v5?lat=20.281612&lng=85.88029879999999&page_type=DESKTOP_WEB_LISTING"
     );
     // console.log(data);
     const restuarentData = await data.json();
-    // console.log(restuarentData);
+    console.log(restuarentData);
     setAllRestuarent(restuarentData?.data?.cards[2]?.data?.data?.cards);
     setfillterRestuarent(restuarentData?.data?.cards[2]?.data?.data?.cards);
   }
@@ -38,8 +39,9 @@ const Main = () => {
   // if (fillterRestuarent.length === 0) {
   //   return null;
   // }
+  // console.log(allRestuarent.length);
 
-  return allRestuarent.length == 0 ? (
+  return allRestuarent.length === 0 ? (
     <Shimmer />
   ) : (
     <section className="text-gray-600 bg-red-100 body-font">
@@ -67,12 +69,20 @@ const Main = () => {
             search
           </button>
         </div>
-        <div className="flex w-full flex-wrap  ">
+        <div className="flex  flex-wrap justify-center   gap-3 ">
           {fillterRestuarent.length === 0 ? (
             <h1 className="text-lg color-red-700">No resturent Found</h1>
           ) : (
             fillterRestuarent.map((rest) => {
-              return <RestuarentCard {...rest.data} key={rest.data.id} />;
+              return (
+                <Link
+                  className=""
+                  to={"/restuarent/" + rest.data.id}
+                  key={rest.data.id}
+                >
+                  <RestuarentCard {...rest.data} />;
+                </Link>
+              );
             })
           )}
         </div>

@@ -8,7 +8,7 @@ const RestuarentCard = ({
   costForTwoString,
 }) => {
   return (
-    <div className="lg:w-1/4 md:w-1/2 p-4 w-full ">
+    <div className=" p-4 w-full  ">
       <a class="block relative h-48 rounded overflow-hidden">
         <img
           alt="ecommerce"
