@@ -9,5 +9,7 @@ const App = () => {
   );
 };
 
+console.log("this is FOR console log demo");
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<App />);
