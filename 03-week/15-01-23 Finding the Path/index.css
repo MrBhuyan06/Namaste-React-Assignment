@@ -1,0 +1,81 @@
+* {
+  box-sizing: border-box;
+
+  text-decoration: none;
+  list-style: none;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  border: 1px solid #1f1f1f;
+  margin: 0 auto;
+  box-shadow: 5px 5px 10px #8b8b87;
+}
+.logo {
+  width: 200px;
+}
+.logo img {
+  width: 100%;
+}
+.filter-btn {
+  margin: 1rem;
+  cursor: pointer;
+}
+
+.nav-items > ul {
+  display: flex;
+  gap: 1rem;
+  margin-right: 1rem;
+}
+.nav-items ul li {
+  cursor: pointer;
+  font-size: 1.3rem;
+}
+.body {
+  margin: 2rem auto;
+  width: 90%;
+  border: 1px solid #1f1f1f;
+  min-height: 70vh;
+  padding: 1rem;
+}
+.res-container,
+.shimmer-list {
+  width: 100%;
+
+  display: flex;
+  gap: 1rem;
+
+  /* margin: 0 auto; */
+  border: 1px solid red;
+  justify-content: center;
+  /* align-content: flex-start; */
+  align-items: center;
+  flex-wrap: wrap;
+}
+.res-card,
+.shimmer-card {
+  margin-top: 1rem;
+  /* max-width: 250px; */
+  /* min-width: 200px; */
+  /* border: 1px solid black; */
+  /* width: min-content; */
+  width: 200px;
+  min-height: 300px;
+  padding: 0.5rem;
+  background-color: #f0f0f0;
+}
+.res-card:hover {
+  border: 1px solid black;
+  cursor: pointer;
+}
+.res-card img {
+  width: 100%;
+  height: 100px;
+  object-fit: cov;
+}
