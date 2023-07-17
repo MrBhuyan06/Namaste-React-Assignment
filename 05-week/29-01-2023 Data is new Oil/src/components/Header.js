@@ -7,6 +7,8 @@ import useOnline from "../hooks/useOnline.js";
 import UserContext from "../utils/UserContext.js";
 import { useContext } from "react";
 
+import { useStateValue } from "../context/stateProvider.js";
+
 const Title = () => (
   <a href="/">
     <img className="w-20" alt="logo" src={Logo} />
@@ -18,6 +20,9 @@ const Header = () => {
   const offline = useOnline();
   console.log(offline);
   const { user } = useContext(UserContext);
+  // const { user: users } = useStateValue();
+  console.log(useStateValue());
+  // console.log(users);
 
   return (
     <div className="flex justify-between container border mx-auto  items-center   ">

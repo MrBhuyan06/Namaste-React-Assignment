@@ -14,6 +14,7 @@ import { lazy, Suspense } from "react";
 import Shimmer from "./components/Shimmer.js";
 import UserContext from "./utils/UserContext.js";
 import { useContext } from "react";
+import { stateProvider } from "./context/stateProvider.js";
 
 const Instamart = lazy(() => import("./components/InstaMart.js"));
 console.log(Instamart);
@@ -23,11 +24,12 @@ const AppLayout = () => {
     name: "Abhishek Bhuyan",
     email: "guduguru@gmail.com",
   });
+  console.log(stateProvider);
   // const { user } = useContext(UserContext);
   // console.log(user);
-  return (
-    <>
-      <UserContext.Provider
+
+  {
+    /* <UserContext.Provider
         value={{
           user: user,
           setUser: setUser,
@@ -36,7 +38,15 @@ const AppLayout = () => {
         <Header />
         <Outlet />
         <Footer />
-      </UserContext.Provider>
+      </UserContext.Provider> */
+  }
+  return (
+    <>
+      <stateProvider initial={setUser}>
+        <Header />
+        <Outlet />
+        <Footer />
+      </stateProvider>
     </>
   );
 };
