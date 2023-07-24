@@ -14,41 +14,41 @@ import { lazy, Suspense } from "react";
 import Shimmer from "./components/Shimmer.js";
 import UserContext from "./utils/UserContext.js";
 import { useContext } from "react";
-import { stateProvider } from "./context/stateProvider.js";
+// import { stateProvider } from "./context/stateProvider.js";
 
 const Instamart = lazy(() => import("./components/InstaMart.js"));
 console.log(Instamart);
 
 const AppLayout = () => {
   const [user, setUser] = useState({
-    name: "Abhishek Bhuyan",
-    email: "guduguru@gmail.com",
+    name: "Abhihske",
+    email: "Bhuyan",
   });
-  console.log(stateProvider);
+
   // const { user } = useContext(UserContext);
   // console.log(user);
 
   {
-    /* <UserContext.Provider
-        value={{
-          user: user,
-          setUser: setUser,
-        }}
-      >
-        <Header />
-        <Outlet />
-        <Footer />
-      </UserContext.Provider> */
   }
   return (
-    <>
-      <stateProvider initial={setUser}>
-        <Header />
-        <Outlet />
-        <Footer />
-      </stateProvider>
-    </>
+    <UserContext.Provider
+      value={{
+        user,
+        setUser: setUser,
+      }}
+    >
+      <Header />
+      <Outlet />
+      <Footer />
+    </UserContext.Provider>
   );
+  // <>
+  //   <statePro initial={initialStatealue}>
+  //     <Header />
+  //     <Outlet />
+  //     <Footer />
+  //   </statePro>
+  // </>
 };
 const appRouter = createBrowserRouter([
   {

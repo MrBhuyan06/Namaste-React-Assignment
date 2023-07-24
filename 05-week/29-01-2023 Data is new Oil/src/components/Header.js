@@ -7,7 +7,7 @@ import useOnline from "../hooks/useOnline.js";
 import UserContext from "../utils/UserContext.js";
 import { useContext } from "react";
 
-import { useStateValue } from "../context/stateProvider.js";
+// import { useStateValue } from "../context/stateProvider.js";
 
 const Title = () => (
   <a href="/">
@@ -20,8 +20,9 @@ const Header = () => {
   const offline = useOnline();
   console.log(offline);
   const { user } = useContext(UserContext);
-  // const { user: users } = useStateValue();
-  console.log(useStateValue());
+  console.log(useContext(UserContext));
+  console.log(user);
+  // console.log(useStateValue());
   // console.log(users);
 
   return (
