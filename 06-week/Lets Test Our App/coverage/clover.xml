@@ -1,11 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1691221973695" clover="3.2.0">
-  <project timestamp="1691221973695" name="All files">
-    <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1" elements="3" coveredelements="3" complexity="0" loc="2" ncloc="2" packages="1" files="1" classes="1"/>
-    <file name="Sum.js" path="D:\JavaScriptWebDevelopment Crouse\Namste- React\Namsate-React-Assigment\06-week\Lets Test Our App\src\components\Sum.js">
-      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <line num="1" count="1" type="stmt"/>
-      <line num="2" count="1" type="stmt"/>
-    </file>
+<coverage generated="1691252360558" clover="3.2.0">
+  <project timestamp="1691252360558" name="All files">
+    <metrics statements="32" coveredstatements="25" conditionals="4" coveredconditionals="2" methods="13" coveredmethods="6" elements="49" coveredelements="33" complexity="0" loc="32" ncloc="32" packages="4" files="8" classes="8"/>
+    <package name="components">
+      <metrics statements="14" coveredstatements="12" conditionals="4" coveredconditionals="2" methods="6" coveredmethods="4"/>
+      <file name="Header.js" path="D:\JavaScriptWebDevelopment Crouse\Namste- React\Namsate-React-Assigment\06-week\Lets Test Our App\src\components\Header.js">
+        <metrics statements="12" coveredstatements="10" conditionals="4" coveredconditionals="2" methods="5" coveredmethods="3"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="24" count="2" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
+        <line num="26" count="1" type="stmt"/>
+        <line num="55" count="0" type="stmt"/>
+        <line num="57" count="0" type="stmt"/>
+      </file>
+      <file name="Sum.js" path="D:\JavaScriptWebDevelopment Crouse\Namste- React\Namsate-React-Assigment\06-week\Lets Test Our App\src\components\Sum.js">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="hooks">
+      <metrics statements="8" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="2"/>
+      <file name="useOnline.js" path="D:\JavaScriptWebDevelopment Crouse\Namste- React\Namsate-React-Assigment\06-week\Lets Test Our App\src\hooks\useOnline.js">
+        <metrics statements="8" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="2"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="mocks">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="DummyLogo.js" path="D:\JavaScriptWebDevelopment Crouse\Namste- React\Namsate-React-Assigment\06-week\Lets Test Our App\src\mocks\DummyLogo.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="utils">
+      <metrics statements="10" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
+      <file name="DemoContext.js" path="D:\JavaScriptWebDevelopment Crouse\Namste- React\Namsate-React-Assigment\06-week\Lets Test Our App\src\utils\DemoContext.js">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+      </file>
+      <file name="UserContext.js" path="D:\JavaScriptWebDevelopment Crouse\Namste- React\Namsate-React-Assigment\06-week\Lets Test Our App\src\utils\UserContext.js">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+      </file>
+      <file name="cartSlice.js" path="D:\JavaScriptWebDevelopment Crouse\Namste- React\Namsate-React-Assigment\06-week\Lets Test Our App\src\utils\cartSlice.js">
+        <metrics statements="5" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+      </file>
+      <file name="store.js" path="D:\JavaScriptWebDevelopment Crouse\Namste- React\Namsate-React-Assigment\06-week\Lets Test Our App\src\utils\store.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="4" count="1" type="stmt"/>
+      </file>
+    </package>
   </project>
 </coverage>
