@@ -12,7 +12,7 @@ import DemoContext from "../utils/DemoContext.js";
 
 const Title = () => (
   <a href="/">
-    <img className="w-20" alt="logo" src={Logo} />
+    <img data-testid="image" className="w-20" alt="logo" src={Logo} />
   </a>
 );
 
@@ -44,7 +44,7 @@ const Header = () => {
           </Link>
 
           <Link to="/cart">
-            <li>Cart-{cart.length} -Store</li>
+            <li data-testid="cart">Cart-{cart.length} -Store</li>
           </Link>
         </ul>
       </div>

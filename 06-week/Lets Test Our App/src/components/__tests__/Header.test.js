@@ -12,5 +12,26 @@ test("Logo Should load on render header", () => {
       </Provider>
     </StaticRouter>
   );
+  //virtual dom
+
   console.log(header);
+  const image = header.getByTestId("image");
+  console.log(image);
+  expect(image.src).toBe("http://localhost/DUMMY%20LOGO");
+});
+
+//test as soon the page load  the cart will be 0
+
+test("The cart value should bw zero on initial render", () => {
+  const header = render(
+    <StaticRouter>
+      <Provider store={store}>
+        <Header />
+      </Provider>
+    </StaticRouter>
+  );
+
+  const cart = header.getByTestId("cart");
+  console.log(cart);
+  expect(cart.innerHTML).toBe("Cart-0 -Store");
 });
