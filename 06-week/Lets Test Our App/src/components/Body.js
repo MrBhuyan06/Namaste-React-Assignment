@@ -51,6 +51,7 @@ const Body = () => {
         />
         <input
           type="text"
+          data-testid="search-btn"
           onChange={(e) => {
             setUser({
               ...user,
@@ -85,7 +86,10 @@ const Body = () => {
           Search
         </button>
       </div>
-      <div className="restaurant-list container flex gap-4 flex-wrap mt-6 justify-center mx-auto border-2">
+      <div
+        className="restaurant-list container flex gap-4 flex-wrap mt-6 justify-center mx-auto border-2"
+        data-testid="res-list"
+      >
         {/* You have to write logic for NO restraunt fount here */}
         {filteredRestaurants.map((restaurant) => {
           return (

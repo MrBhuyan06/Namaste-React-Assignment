@@ -1,4 +1,4 @@
-import { render } from "@testing-library/react";
+import { render, waitFor } from "@testing-library/react";
 import Body from "../../components/Body.js";
 import { Provider } from "react-redux";
 import store from "../../utils/store.js";
@@ -13,7 +13,7 @@ global.fetch = jest.fn(() => {
   });
 });
 
-test("get The bpdy", () => {
+test("Shimmer should load on Homepage", () => {
   const body = render(
     <StaticRouter>
       <Provider store={store}>
@@ -24,4 +24,17 @@ test("get The bpdy", () => {
   const shimmer = body.getByTestId("shimmer");
   //   console.log(shimmer);
   expect(shimmer.children.length).toBe(10);
+});
+
+test("restaurent should load on page", async () => {
+  const body = render(
+    <StaticRouter>
+      <Provider store={store}>
+        <Body />
+      </Provider>
+    </StaticRouter>
+  );
+  await waitFor(() => expect(body.getByTestId("search-btn")));
+  const resList = body.getByTestId("res-list");
+  expect(resList.children.length).toBe(15);
 });
