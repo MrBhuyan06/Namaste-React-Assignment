@@ -1,6 +1,9 @@
 const Shimmer = () => {
   return (
-    <div className="restaurant-list container flex gap-4 flex-wrap mt-6 justify-center mx-auto border-2">
+    <div
+      className="restaurant-list container flex gap-4 flex-wrap mt-6 justify-center mx-auto border-2 "
+      data-testid="shimmer"
+    >
       {Array(10)
         .fill("")
         .map((e, index) => (

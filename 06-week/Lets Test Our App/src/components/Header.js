@@ -50,7 +50,7 @@ const Header = () => {
       </div>
       <span className="text-xl font-bold">{user.name}</span>
       <span className="text-xl font-bold">{demo}</span>
-      {offline ? "✈️✈️✈️" : "offline"}
+      <span data-testid="online">{offline ? "✅" : "offline"}</span>
       {isLoggedIn ? (
         <button onClick={() => setIsLoggedIn(false)}>Logout</button>
       ) : (
