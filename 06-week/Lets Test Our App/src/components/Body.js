@@ -23,8 +23,12 @@ const Body = () => {
       "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.62448069999999&page_type=DESKTOP_WEB_LISTING"
     );
     const json = await data.json();
-    setAllRestaurants(json?.data?.cards[2]?.data?.data?.cards);
-    setFilteredRestaurants(json?.data?.cards[2]?.data?.data?.cards);
+    setAllRestaurants(
+      json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+    );
+    setFilteredRestaurants(
+      json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+    );
   }
   const offline = useOnline();
   console.log(offline);
@@ -44,6 +48,7 @@ const Body = () => {
           type="text"
           className="search-input bg-gray-200 "
           placeholder="Search"
+          data-testid="search-input"
           value={searchText}
           onChange={(e) => {
             setSearchText(e.target.value);
@@ -51,7 +56,6 @@ const Body = () => {
         />
         <input
           type="text"
-          data-testid="search-btn"
           onChange={(e) => {
             setUser({
               ...user,
@@ -75,6 +79,7 @@ const Body = () => {
           value={user.email}
         ></input>
         <button
+          data-testid="search-btns"
           className="search-btn bg-gray-300 rounded-md p-1 "
           onClick={() => {
             //need to filter the data
@@ -94,10 +99,10 @@ const Body = () => {
         {filteredRestaurants.map((restaurant) => {
           return (
             <Link
-              to={"/restaurant/" + restaurant.data.id}
-              key={restaurant.data.id}
+              to={"/restaurant/" + restaurant.info.id}
+              key={restaurant.info.id}
             >
-              <RestaurantCard {...restaurant.data} />
+              <RestaurantCard {...restaurant.info} />
             </Link>
           );
         })}

@@ -1,4 +1,4 @@
-import { render, waitFor } from "@testing-library/react";
+import { fireEvent, render, waitFor } from "@testing-library/react";
 import Body from "../../components/Body.js";
 import { Provider } from "react-redux";
 import store from "../../utils/store.js";
@@ -34,7 +34,31 @@ test("restaurent should load on page", async () => {
       </Provider>
     </StaticRouter>
   );
-  await waitFor(() => expect(body.getByTestId("search-btn")));
+  console.log(body);
+  await waitFor(() => expect(body.getByTestId("search-btns")));
   const resList = body.getByTestId("res-list");
   expect(resList.children.length).toBe(15);
 });
+
+// test("Search For string (food) on HomePage", async () => {
+//   const body = render(
+//     <StaticRouter>
+//       <Provider store={store}>
+//         <Body />
+//       </Provider>
+//     </StaticRouter>
+//   );
+//   await waitFor(() => expect(body.getByTestId("search-btns")));
+//   const input = body.getByTestId("search-inpu");
+//   console.log(input);
+//   fireEvent.change(input, {
+//     target: {
+//       value: "kfc",
+//     },
+//   });
+//   const searchBtn = body.getByTestId("search-btns");
+//   console.log(searchBtn);
+//   fireEvent.click(searchBtn);
+//   const resList = body.getByTestId("res-list");
+//   expect(resList.children.length).toBe(1);
+// });
